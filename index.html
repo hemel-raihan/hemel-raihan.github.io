@@ -5,105 +5,365 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hemel Raihan | Senior Software Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
-  <header class="hero">
-    <h1>Hemel Raihan</h1>
-    <h2>Senior Software Engineer</h2>
-    <p>
-      I design and build enterprise-grade software systems used in nationwide
-      production environments, powering hundreds of outlets and multiple
-      business units.
-    </p>
-    <span class="tech">Laravel · Vue.js · SQL Server · System Design</span>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">HR</div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-background">
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="profile-image-container">
+        <img src="https://via.placeholder.com/200x200/38bdf8/ffffff?text=HR" alt="Hemel Raihan" class="profile-image" />
+        <div class="profile-ring"></div>
+      </div>
+      <h1 class="hero-title">Hemel Raihan</h1>
+      <h2 class="hero-subtitle">Senior Software Engineer</h2>
+      <p class="hero-description">
+        I design and build enterprise-grade software systems used in nationwide
+        production environments, powering hundreds of outlets and multiple
+        business units.
+      </p>
+      <div class="tech-stack">
+        <span class="tech-badge">Laravel</span>
+        <span class="tech-badge">Vue.js</span>
+        <span class="tech-badge">SQL Server</span>
+        <span class="tech-badge">System Design</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </header>
 
-  <section>
-    <h3>About Me</h3>
-    <p>
-      I am a Senior Software Engineer with hands-on experience building and
-      maintaining large-scale, business-critical applications.
-    </p>
-    <ul>
-      <li>High-volume transactional systems</li>
-      <li>Long-running applications (POS, DMS)</li>
-      <li>Multi-tenant and multi-database architectures</li>
-    </ul>
-    <p>
-      I have delivered systems actively used across <strong>800+ outlets</strong>
-      and <strong>10+ independent business units</strong>, supporting daily
-      operations such as retail POS, dealer management, demand planning, and
-      service platforms.
-    </p>
-  </section>
-
-  <section>
-    <h3>Professional Experience</h3>
-    <p><strong>Senior Software Engineer</strong> — Enterprise Systems</p>
-    <ul>
-      <li>Designed and maintained enterprise applications used nationwide</li>
-      <li>Built POS systems running continuously without refresh</li>
-      <li>Developed approval workflows across multiple business units</li>
-      <li>Ensured performance, stability, and scalability</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Key Projects</h3>
-
-    <div class="project">
-      <h4>🛒 Shwapno POS System</h4>
-      <p>Nationwide POS system for continuous retail operations.</p>
-      <p><strong>Scale:</strong> 800+ outlets</p>
-      <p><strong>Tech:</strong> Laravel, Vue.js, SQL Server, REST APIs</p>
-    </div>
-
-    <div class="project">
-      <h4>🌾 Demand Generation System</h4>
-      <p>Demand planning and execution platform.</p>
-      <p><strong>Scale:</strong> 800+ outlets</p>
-      <p><strong>Tech:</strong> Laravel, Vue.js, SQL Server</p>
-    </div>
-
-    <div class="project">
-      <h4>🚗 Dealer Management System (ACI Motors)</h4>
-      <p>Centralized dealer and order management system.</p>
-      <p><strong>Scale:</strong> 10+ business units</p>
-      <p><strong>Tech:</strong> Laravel, Vue.js, Multi-Database Architecture</p>
-    </div>
-
-    <div class="project">
-      <h4>⚡ EcoFlow Renewable Energy</h4>
-      <p>Customer service and service lifecycle platform.</p>
-      <p><strong>Tech:</strong> Laravel, Vue.js, REST APIs</p>
-    </div>
-
-    <div class="project">
-      <h4>🏍️ Yamaha Bangladesh Pre-Booking</h4>
-      <p>Official website and nationwide bike pre-booking system.</p>
-      <p><strong>Tech:</strong> Laravel, Vue.js, SQL Server</p>
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">About Me</h3>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead">
+            I am a Senior Software Engineer with hands-on experience building and
+            maintaining large-scale, business-critical applications.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>High-volume transactional systems</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Long-running applications (POS, DMS)</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Multi-tenant and multi-database architectures</span>
+            </div>
+          </div>
+          <div class="stats-container">
+            <div class="stat-card">
+              <div class="stat-number">800+</div>
+              <div class="stat-label">Active Outlets</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Business Units</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h3>Skills</h3>
-    <p>
-      <strong>Backend:</strong> Laravel, PHP, REST APIs<br/>
-      <strong>Frontend:</strong> Vue.js, Nuxt.js, Tailwind CSS, Bootstrap<br/>
-      <strong>Database:</strong> Microsoft SQL Server, MySQL<br/>
-      <strong>Tools:</strong> GitHub, GitLab, Postman, Power BI, Jira<br/>
-      <strong>Architecture:</strong> POS Systems, Multi-Tenant Design, Approval Workflows
-    </p>
+  <!-- Experience Section -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">Professional Experience</h3>
+        <div class="section-line"></div>
+      </div>
+      <div class="experience-content">
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <h4 class="experience-title">Senior Software Engineer</h4>
+              <p class="experience-company">Enterprise Systems</p>
+            </div>
+            <div class="experience-badge">Current</div>
+          </div>
+          <ul class="experience-list">
+            <li><i class="fas fa-angle-right"></i> Designed and maintained enterprise applications used nationwide</li>
+            <li><i class="fas fa-angle-right"></i> Built POS systems running continuously without refresh</li>
+            <li><i class="fas fa-angle-right"></i> Developed approval workflows across multiple business units</li>
+            <li><i class="fas fa-angle-right"></i> Ensured performance, stability, and scalability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>
-      <a href="https://github.com/hemel-raihan">GitHub</a> ·
-      <a href="#">LinkedIn</a>
-    </p>
-    <p class="quote">“I build systems businesses depend on every day.”</p>
+  <!-- Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">Featured Projects</h3>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/0ea5e9/ffffff?text=POS+System" alt="Shwapno POS" />
+            <div class="project-overlay">
+              <span class="project-icon">🛒</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title">Shwapno POS System</h4>
+            <p class="project-description">
+              Nationwide POS system for continuous retail operations.
+            </p>
+            <div class="project-meta">
+              <span class="meta-item"><i class="fas fa-store"></i> 800+ outlets</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">SQL Server</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/10b981/ffffff?text=Demand+Planning" alt="Demand Generation" />
+            <div class="project-overlay">
+              <span class="project-icon">🌾</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title">Demand Generation System</h4>
+            <p class="project-description">
+              Demand planning and execution platform for retail operations.
+            </p>
+            <div class="project-meta">
+              <span class="meta-item"><i class="fas fa-chart-line"></i> 800+ outlets</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/8b5cf6/ffffff?text=DMS" alt="Dealer Management" />
+            <div class="project-overlay">
+              <span class="project-icon">🚗</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title">Dealer Management System</h4>
+            <p class="project-description">
+              Centralized dealer and order management for ACI Motors.
+            </p>
+            <div class="project-meta">
+              <span class="meta-item"><i class="fas fa-building"></i> 10+ business units</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">Multi-DB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=EcoFlow" alt="EcoFlow" />
+            <div class="project-overlay">
+              <span class="project-icon">⚡</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title">EcoFlow Renewable Energy</h4>
+            <p class="project-description">
+              Customer service and service lifecycle management platform.
+            </p>
+            <div class="project-meta">
+              <span class="meta-item"><i class="fas fa-bolt"></i> Green Energy</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/600x400/ef4444/ffffff?text=Yamaha" alt="Yamaha" />
+            <div class="project-overlay">
+              <span class="project-icon">🏍️</span>
+            </div>
+          </div>
+          <div class="project-content">
+            <h4 class="project-title">Yamaha Bangladesh Pre-Booking</h4>
+            <p class="project-description">
+              Official website and nationwide bike pre-booking system.
+            </p>
+            <div class="project-meta">
+              <span class="meta-item"><i class="fas fa-motorcycle"></i> Nationwide</span>
+            </div>
+            <div class="project-tech">
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">Vue.js</span>
+              <span class="tech-tag">SQL Server</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">Technical Skills</h3>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h4>Backend Development</h4>
+          <div class="skill-tags">
+            <span>Laravel</span>
+            <span>PHP</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+          <h4>Frontend Development</h4>
+          <div class="skill-tags">
+            <span>Vue.js</span>
+            <span>Nuxt.js</span>
+            <span>Tailwind CSS</span>
+            <span>Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h4>Database</h4>
+          <div class="skill-tags">
+            <span>SQL Server</span>
+            <span>MySQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-icon"><i class="fas fa-tools"></i></div>
+          <h4>Tools & Platforms</h4>
+          <div class="skill-tags">
+            <span>GitHub</span>
+            <span>GitLab</span>
+            <span>Postman</span>
+            <span>Power BI</span>
+            <span>Jira</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+          <h4>Architecture</h4>
+          <div class="skill-tags">
+            <span>POS Systems</span>
+            <span>Multi-Tenant</span>
+            <span>Workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">Get In Touch</h3>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content">
+        <p class="contact-text">
+          I'm always interested in hearing about new projects and opportunities.
+          Whether you have a question or just want to say hi, feel free to reach out!
+        </p>
+        <div class="contact-links">
+          <a href="https://github.com/hemel-raihan" class="contact-btn" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="contact-btn" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:your.email@example.com" class="contact-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-quote">"I build systems businesses depend on every day."</p>
+      <p class="footer-copyright">© 2024 Hemel Raihan. All rights reserved.</p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
