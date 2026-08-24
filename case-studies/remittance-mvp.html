@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Functional cross-border remittance MVP by Md Hemel Raihan using Laravel, Spring Boot and Flutter.">
+  <meta name="theme-color" content="#0b0d0c">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Cross-Border Remittance MVP — Md Hemel Raihan</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="../index.html" aria-label="Back to Hemel Raihan portfolio"><span class="brand-mark">HR</span><span class="brand-copy">Hemel Raihan<small>Senior Software Engineer</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Case study navigation"><a href="../index.html#work">All work</a><a href="../index.html#experience">Experience</a><a href="../assets/resume/hemel-raihan-cv.pdf" target="_blank" rel="noopener">Résumé</a><a class="nav-cta" href="../index.html#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" id="overview">
+      <div class="case-breadcrumb reveal"><a href="../index.html#work">Selected work</a><span>/</span><span>Remittance MVP</span></div>
+      <div class="case-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Functional MVP · Independent prototype</p>
+          <h1>Cross-Border<br>Remittance MVP</h1>
+          <p class="case-lead">A functional pre-funded remittance prototype covering recipient management, FX conversion, rate locking, ledger-based fund movement and simulated cross-border payout flows.</p>
+        </div>
+        <div class="case-metrics reveal" aria-label="Prototype scope"><div><strong>MVP</strong><span>functional prototype</span></div><div><strong>3</strong><span>application layers</span></div><div><strong>Sandbox</strong><span>bank callback flow</span></div></div>
+      </div>
+      <div class="case-cover remittance-case-cover reveal" aria-label="Remittance prototype architecture preview">
+        <div><span>Mobile experience</span><strong>Flutter App</strong></div><i>→</i><div><span>Transaction core</span><strong>Laravel Backend</strong></div><i>↔</i><div><span>FX service</span><strong>Spring Boot</strong></div>
+      </div>
+      <div class="prototype-notice reveal"><strong>Prototype status</strong><p>This is an independently developed functional prototype, not an officially approved, released or regulated ACI remittance product. No real customer funds are transferred.</p></div>
+    </section>
+
+    <section class="case-body">
+      <aside class="case-toc reveal" aria-label="Case study contents"><span>Case study</span><a href="#project-overview">Overview</a><a href="#business-problem">Product goal</a><a href="#my-role">My role</a><a href="#implementation">Implementation</a><a href="#challenges">Engineering challenges</a><a href="#architecture">Architecture</a><a href="#roadmap">Production roadmap</a><a href="#impact">Outcome</a></aside>
+
+      <article class="case-content">
+        <section class="case-section reveal" id="project-overview">
+          <span class="case-section-number">01</span><h2>Overview</h2>
+          <p>The MVP explores a remittance experience similar in product scope to Wise or Taptap Send. It uses a pre-funded payout model rather than a SWIFT transfer: liquidity is positioned in advance so the destination-side payout can be processed locally after the source-side transaction is confirmed.</p>
+          <div class="case-stack"><span>Laravel transaction backend</span><span>Spring Boot FX microservice</span><span>Flutter mobile app</span><span>Ledger-based accounting</span><span>Sandbox callbacks</span></div>
+          <div class="ownership-note"><strong>Transfer model</strong><p>Source-side collection → transaction-period FX lock → ledger-backed settlement → payout from pre-funded destination liquidity. The MVP does not model a direct SWIFT wire.</p></div>
+        </section>
+
+        <section class="case-section reveal" id="business-problem">
+          <span class="case-section-number">02</span><h2>Product goal</h2>
+          <p>The objective was to validate the technical shape of an end-to-end pre-funded remittance product: clear FX pricing, recipient management, dependable transaction state, traceable fund movement, destination liquidity and integration boundaries for future banking partners.</p>
+        </section>
+
+        <section class="case-section reveal" id="my-role">
+          <span class="case-section-number">03</span><h2>My role</h2>
+          <p>I designed and implemented the Laravel transaction backend, ledger structure and core remittance processes. I also built and integrated a Java Spring Boot microservice for FX conversion and rate locking, and connected those services to the Flutter prototype.</p>
+          <div class="ownership-note"><strong>AI-assisted prototyping</strong><p>I used Claude as an AI-assisted coding tool to accelerate parts of the Flutter interface prototype. I defined the product flows, backend contracts, transaction architecture and service integration, while using AI to shorten the UI exploration cycle.</p></div>
+        </section>
+
+        <section class="case-section reveal" id="implementation">
+          <span class="case-section-number">04</span><h2>What I designed and implemented</h2>
+          <ul class="case-feature-list">
+            <li>Recipient creation and management for simulated cross-border transfers.</li>
+            <li>Pre-funded settlement and local payout flow rather than direct SWIFT transfer processing.</li>
+            <li>FX quote, currency conversion and transaction-period rate locking through a Spring Boot microservice.</li>
+            <li>Laravel-based transaction orchestration and status processing.</li>
+            <li>Ledger structure for traceable debit, credit and simulated fund movement.</li>
+            <li>Flutter user journeys for recipient selection, quote review and transfer progression.</li>
+            <li>Test callback functions that simulate asynchronous bank confirmation in a sandbox flow.</li>
+          </ul>
+        </section>
+
+        <section class="case-section reveal" id="challenges">
+          <span class="case-section-number">05</span><h2>Key engineering challenges</h2>
+          <div class="challenge-grid"><div><strong>Rate consistency</strong><p>Keeping the quoted FX rate stable during the permitted transaction window.</p></div><div><strong>Liquidity state</strong><p>Representing source collection and destination pre-funded payout without treating the flow as a SWIFT wire.</p></div><div><strong>Ledger integrity</strong><p>Representing fund movement as balanced, traceable entries rather than simple status updates.</p></div><div><strong>Asynchronous confirmation</strong><p>Testing transaction progression when banking confirmation arrives later through a callback.</p></div></div>
+        </section>
+
+        <section class="case-section reveal" id="architecture">
+          <span class="case-section-number">06</span><h2>Architecture and solution</h2>
+          <p>The prototype separates customer experience, transaction orchestration and FX logic so each part can evolve independently and future banking integrations can attach to clear boundaries.</p>
+          <div class="architecture-flow"><div><span>Client</span><strong>Flutter mobile prototype</strong><strong>Recipients · Quotes · Transfers</strong></div><i aria-hidden="true">↓</i><div><span>Core backend</span><strong>Laravel APIs</strong><strong>Transactions · Ledger · Callback handling</strong></div><i aria-hidden="true">↕</i><div><span>Specialised service</span><strong>Spring Boot FX API</strong><strong>Conversion · Quote · Rate lock</strong></div><i aria-hidden="true">↓</i><div><span>Settlement model</span><strong>Pre-funded destination liquidity</strong><strong>Simulated local payout callback</strong></div></div>
+        </section>
+
+        <section class="case-section reveal" id="roadmap">
+          <span class="case-section-number">07</span><h2>From sandbox to production</h2>
+          <p>The present MVP uses test callbacks instead of live banking infrastructure. A production release would require regulatory approval and country-specific banking partnerships before processing real transfers.</p>
+          <div class="roadmap-grid"><div><span>Current prototype</span><strong>Simulated bank callbacks</strong><strong>Test transaction lifecycle</strong><strong>No real-money movement</strong></div><div><span>Future production integration</span><strong>Bangladesh Bank and destination-country approvals</strong><strong>Live bank APIs, webhooks and callbacks</strong><strong>Production compliance and security controls</strong></div></div>
+        </section>
+
+        <section class="case-section reveal" id="impact">
+          <span class="case-section-number">08</span><h2>Outcome</h2>
+          <p>The functional MVP validates an end-to-end remittance flow and demonstrates a modular approach to transaction processing, FX rate management, ledger-backed movement and future bank integration—without presenting the prototype as a released financial product.</p>
+        </section>
+      </article>
+    </section>
+
+    <section class="case-next"><p>Next case study</p><a href="aci-connect.html">View ACI Connect <span aria-hidden="true">→</span></a></section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="currentYear"></span> Md Hemel Raihan</p><p>Functional remittance MVP case study</p><p><a href="../index.html">Back to portfolio</a></p></footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Project screenshot preview"><div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close screenshot">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></div></dialog>
+  <script src="../script.js"></script>
+</body>
+</html>

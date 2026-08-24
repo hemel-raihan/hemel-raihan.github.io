@@ -1,6 +1,7 @@
 const header = document.getElementById('siteHeader');
 const menuToggle = document.getElementById('menuToggle');
 const siteNav = document.getElementById('siteNav');
+const menuLinks = [...document.querySelectorAll('.site-nav a')];
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
 const filterButtons = [...document.querySelectorAll('.filter-button')];
 const projectCards = [...document.querySelectorAll('.project-card')];
@@ -22,7 +23,7 @@ menuToggle.addEventListener('click', () => {
   setMenu(!siteNav.classList.contains('is-open'));
 });
 
-navLinks.forEach((link) => link.addEventListener('click', () => setMenu(false)));
+menuLinks.forEach((link) => link.addEventListener('click', () => setMenu(false)));
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenu(false);

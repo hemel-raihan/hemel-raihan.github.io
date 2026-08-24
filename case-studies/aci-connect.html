@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ACI Connect case study by Md Hemel Raihan — enterprise intranet, SSO and role-based application access for 16,000+ employees.">
+  <meta name="theme-color" content="#0b0d0c">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>ACI Connect Case Study — Md Hemel Raihan</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="../index.html" aria-label="Back to Hemel Raihan portfolio">
+      <span class="brand-mark">HR</span>
+      <span class="brand-copy">Hemel Raihan<small>Senior Software Engineer</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Case study navigation">
+      <a href="../index.html#work">All work</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../assets/resume/hemel-raihan-cv.pdf" target="_blank" rel="noopener">Résumé</a>
+      <a class="nav-cta" href="../index.html#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" id="overview">
+      <div class="case-breadcrumb reveal"><a href="../index.html#work">Selected work</a><span>/</span><span>ACI Connect</span></div>
+      <div class="case-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Enterprise intranet · Flagship case study</p>
+          <h1>ACI Connect</h1>
+          <p class="case-lead">A unified employee platform combining secure application access, workplace communication and essential services for a complex multi-business organisation.</p>
+        </div>
+        <div class="case-metrics reveal" aria-label="Project outcomes">
+          <div><strong>16,000+</strong><span>active users</span></div>
+          <div><strong>SSO</strong><span>central access</span></div>
+          <div><strong>RBAC</strong><span>permission model</span></div>
+        </div>
+      </div>
+      <figure class="case-cover reveal">
+        <img src="../assets/projects/aci-connect/01-homepage.png" alt="ACI Connect employee homepage and role-based application launcher">
+      </figure>
+    </section>
+
+    <section class="case-body">
+      <aside class="case-toc reveal" aria-label="Case study contents">
+        <span>Case study</span>
+        <a href="#project-overview">Overview</a>
+        <a href="#business-problem">Business problem</a>
+        <a href="#my-role">My role</a>
+        <a href="#implementation">Implementation</a>
+        <a href="#challenges">Engineering challenges</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#impact">Impact</a>
+      </aside>
+
+      <article class="case-content">
+        <section class="case-section reveal" id="project-overview">
+          <span class="case-section-number">01</span>
+          <h2>Overview</h2>
+          <p>ACI Connect is an enterprise intranet and central application gateway. It gives employees one personalised place to discover company resources, access permitted systems, follow organisational updates and use workplace services.</p>
+          <div class="case-stack" aria-label="Technology stack">
+            <span>Nuxt.js employee portal</span><span>Laravel 12 backend</span><span>Vue 3 admin</span><span>Microsoft SQL Server</span><span>Queues &amp; scheduler</span><span>Google Maps</span>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="business-problem">
+          <span class="case-section-number">02</span>
+          <h2>Business problem</h2>
+          <p>Employees previously depended on fragmented entry points for internal applications and information. Different business units also required distinct access rules, while employee hierarchy and application permissions had to remain aligned with changing HR records.</p>
+        </section>
+
+        <section class="case-section reveal" id="my-role">
+          <span class="case-section-number">03</span>
+          <h2>My role</h2>
+          <p>I designed the authentication flow, permission architecture, database structure and core application modules. I also translated stakeholder and operational requirements into scalable workflows across the employee portal and administration dashboard.</p>
+        </section>
+
+        <section class="case-section reveal" id="implementation">
+          <span class="case-section-number">04</span>
+          <h2>What I designed and implemented</h2>
+          <ul class="case-feature-list">
+            <li>Personalised employee portal with search, social content and a central application launcher.</li>
+            <li>Single sign-on and role-based access control for permitted applications and websites.</li>
+            <li>Automated HR data synchronisation for employee profiles, hierarchy and access decisions.</li>
+            <li>Admin workflows for application access, content, onboarding, knowledge and employee recognition.</li>
+            <li>Visual Google Maps–based office transport route selection.</li>
+            <li>Queued background processing and scheduled data operations.</li>
+          </ul>
+        </section>
+
+        <section class="case-section reveal" id="challenges">
+          <span class="case-section-number">05</span>
+          <h2>Key engineering challenges</h2>
+          <div class="challenge-grid">
+            <div><strong>Identity at scale</strong><p>Keeping employee hierarchy and application permissions consistent across multiple business units.</p></div>
+            <div><strong>Distributed data</strong><p>Working across multiple database connections while maintaining dependable data flows.</p></div>
+            <div><strong>Background workloads</strong><p>Moving synchronisation and recurring processes into queues and scheduled jobs.</p></div>
+            <div><strong>Permission clarity</strong><p>Ensuring each employee sees only the applications and resources relevant to their role.</p></div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="architecture">
+          <span class="case-section-number">06</span>
+          <h2>Architecture and solution</h2>
+          <p>The platform separates the employee experience, administrative workflows and core service layer while sharing one permission model and synchronised data foundation.</p>
+          <div class="architecture-flow" aria-label="ACI Connect solution architecture">
+            <div><span>Experience</span><strong>Nuxt.js Employee Portal</strong><strong>Vue 3 Admin Dashboard</strong></div>
+            <i aria-hidden="true">↓</i>
+            <div><span>Application layer</span><strong>Laravel 12 APIs</strong><strong>SSO · RBAC · Queues</strong></div>
+            <i aria-hidden="true">↓</i>
+            <div><span>Data &amp; integration</span><strong>Microsoft SQL Server</strong><strong>Stored procedures · Views · Scheduler · Multi-DB</strong></div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="impact">
+          <span class="case-section-number">07</span>
+          <h2>Impact</h2>
+          <p>More than 16,000 active employees can access permitted applications from one platform. The solution reduces fragmented access, centralises permission management and creates a consistent digital workplace across business units.</p>
+        </section>
+
+        <section class="case-section case-gallery-section reveal" aria-labelledby="screensTitle">
+          <span class="case-section-number">08</span>
+          <h2 id="screensTitle">Selected product screens</h2>
+          <div class="case-gallery">
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/aci-connect/01-homepage.png" data-caption="Personalised homepage, search and role-based application launcher"><img src="../assets/projects/aci-connect/01-homepage.png" alt="ACI Connect homepage"><span>Homepage &amp; launcher</span></button>
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/aci-connect/02-shoutout.png" data-caption="Employee-to-employee recognition workflow"><img src="../assets/projects/aci-connect/02-shoutout.png" alt="ACI Connect recognition workflow"><span>Recognition workflow</span></button>
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/aci-connect/03-employee-profile-redacted.png" data-caption="Privacy-safe employee profile and organisational journey"><img src="../assets/projects/aci-connect/03-employee-profile-redacted.png" alt="Privacy-safe employee profile"><span>Employee profile</span></button>
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/aci-connect/04-content-feed-redacted.png" data-caption="Privacy-safe content, recognition and mandatory reads"><img src="../assets/projects/aci-connect/04-content-feed-redacted.png" alt="Privacy-safe employee content feed"><span>Content &amp; knowledge</span></button>
+          </div>
+        </section>
+      </article>
+    </section>
+
+    <section class="case-next">
+      <p>Next case study</p>
+      <a href="yamaha-dms.html">Yamaha DMS &amp; PayLink <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="currentYear"></span> Md Hemel Raihan</p><p>ACI Connect case study</p><p><a href="../index.html">Back to portfolio</a></p></footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Project screenshot preview">
+    <div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close screenshot">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></div>
+  </dialog>
+  <script src="../script.js"></script>
+</body>
+</html>

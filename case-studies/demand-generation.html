@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demand Generation Platform case study by Md Hemel Raihan — high-volume retail demand automation for 1,000+ outlets.">
+  <meta name="theme-color" content="#0b0d0c">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Demand Generation Platform Case Study — Md Hemel Raihan</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="../index.html" aria-label="Back to Hemel Raihan portfolio"><span class="brand-mark">HR</span><span class="brand-copy">Hemel Raihan<small>Senior Software Engineer</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Case study navigation"><a href="../index.html#work">All work</a><a href="../index.html#experience">Experience</a><a href="../assets/resume/hemel-raihan-cv.pdf" target="_blank" rel="noopener">Résumé</a><a class="nav-cta" href="../index.html#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" id="overview">
+      <div class="case-breadcrumb reveal"><a href="../index.html#work">Selected work</a><span>/</span><span>Demand Generation</span></div>
+      <div class="case-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Retail planning · High-volume automation</p>
+          <h1>Demand Generation Platform</h1>
+          <p class="case-lead">A self-service demand workflow that replaced giant emailed spreadsheets and manual consolidation with permission-scoped outlet files, high-volume imports and one-click reporting.</p>
+        </div>
+        <div class="case-metrics reveal" aria-label="Project scale"><div><strong>1,000+</strong><span>active outlets</span></div><div><strong>150K</strong><span>products in source data</span></div><div><strong>1M+</strong><span>detail rows per cycle</span></div></div>
+      </div>
+      <figure class="case-cover reveal"><img src="../assets/projects/demand-generation/cover-data-pipeline.png" alt="High-volume spreadsheet-to-outlet demand automation data pipeline illustration"></figure>
+    </section>
+
+    <section class="case-body">
+      <aside class="case-toc reveal" aria-label="Case study contents"><span>Case study</span><a href="#project-overview">Overview</a><a href="#business-problem">Business problem</a><a href="#my-role">My role</a><a href="#implementation">Implementation</a><a href="#challenges">Engineering challenges</a><a href="#architecture">Data architecture</a><a href="#impact">Impact</a></aside>
+
+      <article class="case-content">
+        <section class="case-section reveal" id="project-overview">
+          <span class="case-section-number">01</span><h2>Overview</h2>
+          <p>Every two days, outlet managers assess which products are running low and submit the quantities their outlet needs. The Demand Generation Platform now manages this cycle digitally across more than 1,000 outlets, from head-office source upload to outlet input and consolidated reporting.</p>
+          <div class="case-stack"><span>Excel import/export</span><span>Permission-scoped outlet data</span><span>Master-detail architecture</span><span>Temporary history tables</span><span>Scheduled retention</span><span>One-click consolidation</span></div>
+        </section>
+
+        <section class="case-section reveal" id="business-problem">
+          <span class="case-section-number">02</span><h2>Business problem</h2>
+          <p>Head office maintained a massive spreadsheet containing roughly 150,000 products, columns for around 1,000 outlets and multiple supporting fields such as feedback, allocation and approval. The same file was emailed to every outlet manager, who had to download it, locate the correct outlet and products, enter demand and reply with another file. Head office then manually collected and merged all returned sheets into one report.</p>
+          <div class="before-after"><div><span>Before</span><strong>One giant spreadsheet</strong><strong>1,000+ individual emails</strong><strong>Manual outlet/product lookup</strong><strong>Manual file consolidation</strong></div><i aria-hidden="true">→</i><div><span>After</span><strong>One head-office upload</strong><strong>Permission-based outlet files</strong><strong>Self-service manager upload</strong><strong>One-click consolidated report</strong></div></div>
+        </section>
+
+        <section class="case-section reveal" id="my-role">
+          <span class="case-section-number">03</span><h2>My role</h2>
+          <p>I designed and developed the Demand Generation solution, including the high-volume data model, upload and export flows, outlet-level permission scoping, temporary-history strategy, scheduled retention and consolidated reporting process.</p>
+        </section>
+
+        <section class="case-section reveal" id="implementation">
+          <span class="case-section-number">04</span><h2>What I designed and implemented</h2>
+          <ul class="case-feature-list">
+            <li>Single head-office upload of the large source workbook for each demand cycle.</li>
+            <li>High-volume parsing and insertion of more than one million detail records per cycle.</li>
+            <li>Permission-aware outlet access so managers see and download only their assigned outlet data.</li>
+            <li>Outlet-specific Excel generation instead of distributing the complete national workbook.</li>
+            <li>Manager upload workflow for completed product-demand quantities.</li>
+            <li>One-click consolidation of submitted outlet demand into a head-office report.</li>
+            <li>Temporary table strategy for retaining the previous cycle while the current cycle remains active.</li>
+            <li>Scheduled cleanup of expired data after the one-week retention window.</li>
+          </ul>
+        </section>
+
+        <section class="case-section reveal" id="challenges">
+          <span class="case-section-number">05</span><h2>Key engineering challenges</h2>
+          <div class="challenge-grid"><div><strong>Import scale</strong><p>Transforming a giant workbook into more than one million normalised detail rows within a dependable cycle.</p></div><div><strong>Outlet isolation</strong><p>Ensuring each manager can access and modify only the data for permitted outlets.</p></div><div><strong>Cycle continuity</strong><p>Keeping current demand active while retaining the previous cycle long enough for operational reference.</p></div><div><strong>Fast consolidation</strong><p>Turning 1,000+ independently submitted outlet files into one usable head-office report.</p></div></div>
+        </section>
+
+        <section class="case-section reveal" id="architecture">
+          <span class="case-section-number">06</span><h2>Data architecture and flow</h2>
+          <p>The data model separates cycle metadata, outlets, products and demand values so the system can process large imports and generate outlet-scoped files without repeatedly working against one unstructured spreadsheet.</p>
+          <div class="data-model-grid"><div><strong>DemandMaster</strong><span>Demand cycle and source metadata</span></div><div><strong>DemandMasterOutlet</strong><span>Outlets included in the cycle</span></div><div><strong>DemandMasterProduct</strong><span>Products available for demand</span></div><div><strong>DemandDetails</strong><span>Outlet-product demand and workflow values</span></div></div>
+          <div class="ownership-note"><strong>Cycle retention</strong><p>Each core table has a corresponding temporary clone. Main tables hold the current active cycle; temporary tables retain previous-cycle records. A scheduler removes expired data after one week.</p></div>
+          <div class="workflow-pair"><div><span>Input flow</span><strong>Head-office workbook</strong><i>→</i><strong>Parse and normalise</strong><i>→</i><strong>1M+ detail rows</strong><i>→</i><strong>Outlet-scoped exports</strong></div><div><span>Output flow</span><strong>Manager demand entry</strong><i>→</i><strong>Outlet upload</strong><i>→</i><strong>Validation and merge</strong><i>→</i><strong>One-click national report</strong></div></div>
+        </section>
+
+        <section class="case-section reveal" id="impact">
+          <span class="case-section-number">07</span><h2>Impact</h2>
+          <div class="impact-outcomes"><div><strong>1,000+ outlets enabled</strong><p>Outlet managers now complete recurring demand cycles through one permission-controlled platform.</p></div><div><strong>Email distribution removed</strong><p>Head office no longer sends the same giant workbook individually to every manager.</p></div><div><strong>Manual consolidation removed</strong><p>Submitted demand can be combined and downloaded through one report action.</p></div><div><strong>Major time savings</strong><p>The system replaces repetitive file search, email follow-up and spreadsheet merging with a governed workflow.</p></div></div>
+        </section>
+      </article>
+    </section>
+
+    <section class="case-next"><p>Next case study</p><a href="remittance-mvp.html">View Remittance MVP <span aria-hidden="true">→</span></a></section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="currentYear"></span> Md Hemel Raihan</p><p>Demand Generation case study</p><p><a href="../index.html">Back to portfolio</a></p></footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Project screenshot preview"><div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close screenshot">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></div></dialog>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yamaha DMS and PayLink case study by Md Hemel Raihan — nationwide order, payment, sales hierarchy and reporting automation for ACI Motors.">
+  <meta name="theme-color" content="#0b0d0c">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Yamaha DMS &amp; PayLink Case Study — Md Hemel Raihan</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="../index.html" aria-label="Back to Hemel Raihan portfolio"><span class="brand-mark">HR</span><span class="brand-copy">Hemel Raihan<small>Senior Software Engineer</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Case study navigation">
+      <a href="../index.html#work">All work</a><a href="../index.html#experience">Experience</a><a href="../assets/resume/hemel-raihan-cv.pdf" target="_blank" rel="noopener">Résumé</a><a class="nav-cta" href="../index.html#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" id="overview">
+      <div class="case-breadcrumb reveal"><a href="../index.html#work">Selected work</a><span>/</span><span>Yamaha DMS &amp; PayLink</span></div>
+      <div class="case-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Nationwide sales operations · Enterprise transformation</p>
+          <h1>Yamaha DMS<br>&amp; PayLink</h1>
+          <p class="case-lead">ACI Motors’ mission-critical platform for field orders, payment verification, invoicing, sales hierarchy and management reporting across diverse business lines.</p>
+        </div>
+        <div class="case-metrics reveal" aria-label="Project scope">
+          <div><strong>9</strong><span>business lines</span></div>
+          <div><strong>1</strong><span>unified platform</span></div>
+          <div><strong>Nationwide</strong><span>field operation</span></div>
+        </div>
+      </div>
+      <div class="case-cover dms-case-cover reveal" aria-label="PayLink DMS business transformation">
+        <div><span>Field force apps</span><strong>Orders &amp; payment proof</strong></div><i>→</i><div><span>PayLink DMS</span><strong>Unified workflow &amp; control</strong></div><i>→</i><div><span>Head office</span><strong>Approval, invoicing &amp; reports</strong></div>
+      </div>
+    </section>
+
+    <section class="case-body">
+      <aside class="case-toc reveal" aria-label="Case study contents">
+        <span>Case study</span><a href="#project-overview">Overview</a><a href="#business-problem">Business problem</a><a href="#my-role">My role</a><a href="#implementation">Implementation</a><a href="#challenges">Engineering challenges</a><a href="#architecture">Architecture</a><a href="#impact">Impact</a>
+      </aside>
+
+      <article class="case-content">
+        <section class="case-section reveal" id="project-overview">
+          <span class="case-section-number">01</span><h2>Overview</h2>
+          <p>The DMS supports the nationwide sales operation of ACI Motors across Yamaha motorcycles, tractors, EcoFlow, water pumps, CEAT tyres, lube oil, diesel engines, tools and power tillers. Each business has its own sales tree, field hierarchy, customers, targets and operational rules.</p>
+          <div class="business-line-grid" aria-label="Supported ACI Motors business lines"><span>Yamaha</span><span>Tractor</span><span>EcoFlow</span><span>Water Pump</span><span>CEAT Tyre</span><span>Lube Oil</span><span>Diesel Engine</span><span>Tools</span><span>Power Tiller</span></div>
+        </section>
+
+        <section class="case-section reveal" id="business-problem">
+          <span class="case-section-number">02</span><h2>Business problem</h2>
+          <p>Field teams collected customer orders across Bangladesh and sent them to head office through WhatsApp. Payment evidence followed the same process: screenshots moved from field staff to business teams and then to finance for approval. The volume of messages and images made approvals, reconciliation, invoicing and operational tracking slow and difficult to audit.</p>
+          <div class="before-after">
+            <div><span>Before</span><strong>WhatsApp orders</strong><strong>Scattered payment images</strong><strong>Manual forwarding and follow-up</strong></div>
+            <i aria-hidden="true">→</i>
+            <div><span>After</span><strong>Structured digital orders</strong><strong>Trackable payment approval</strong><strong>Invoice-ready approved records</strong></div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="my-role">
+          <span class="case-section-number">03</span><h2>My role</h2>
+          <p>I worked on the order, payment, hierarchy and reporting workflows and implemented a major PayLink DMS enhancement. The enhancement brought previously separate business databases and processes into one management platform while preserving each business unit’s individual hierarchy and operational rules.</p>
+        </section>
+
+        <section class="case-section reveal" id="implementation">
+          <span class="case-section-number">04</span><h2>What I designed and implemented</h2>
+          <ul class="case-feature-list">
+            <li>Field-force order entry through mobile apps instead of informal WhatsApp messages.</li>
+            <li>Head-office review, discount application and final order approval workflows.</li>
+            <li>Automatic movement of approved orders into an invoice-ready panel.</li>
+            <li>Payment submission with proof and amount, routed directly to finance dashboards for approval.</li>
+            <li>PayLink consolidation for cross-business order and payment management from one platform.</li>
+            <li>Full sales-tree hierarchy tracking, including reporting by supervisor, team and field level.</li>
+            <li>Customer and dealer target-versus-achievement reporting.</li>
+            <li>Credit-customer reporting with mapped credit limits and credit days.</li>
+          </ul>
+        </section>
+
+        <section class="case-section reveal" id="challenges">
+          <span class="case-section-number">05</span><h2>Key engineering challenges</h2>
+          <div class="challenge-grid">
+            <div><strong>Different business models</strong><p>Nine business lines had separate databases, customers, field hierarchies and operational rules.</p></div>
+            <div><strong>Unified without flattening</strong><p>PayLink needed one control layer while retaining business-specific data boundaries and sales trees.</p></div>
+            <div><strong>Financial traceability</strong><p>Payment evidence, amounts and approval status had to remain visible and auditable across teams.</p></div>
+            <div><strong>Hierarchy-aware reporting</strong><p>Reports needed to explain who sold under whom, target performance and customer credit exposure.</p></div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="architecture">
+          <span class="case-section-number">06</span><h2>Architecture and solution</h2>
+          <p>The solution standardised the order-to-invoice and payment-to-approval journeys while using PayLink as a unified orchestration and reporting layer over business-specific data.</p>
+          <div class="workflow-pair">
+            <div><span>Order lifecycle</span><strong>Field app order</strong><i>→</i><strong>Head-office review &amp; discount</strong><i>→</i><strong>Final approval</strong><i>→</i><strong>Invoice panel</strong></div>
+            <div><span>Payment lifecycle</span><strong>Proof + amount submission</strong><i>→</i><strong>Finance dashboard</strong><i>→</i><strong>Approval</strong><i>→</i><strong>Reconciled record</strong></div>
+          </div>
+          <div class="architecture-flow">
+            <div><span>Business layer</span><strong>9 business-specific apps</strong><strong>Independent databases &amp; sales trees</strong></div><i aria-hidden="true">↓</i>
+            <div><span>Unified layer</span><strong>PayLink DMS</strong><strong>Orders · Payments · Hierarchy · Rules</strong></div><i aria-hidden="true">↓</i>
+            <div><span>Decision layer</span><strong>Approvals &amp; invoicing</strong><strong>Targets · Achievement · Credit reports</strong></div>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="impact">
+          <span class="case-section-number">07</span><h2>Impact</h2>
+          <div class="impact-outcomes">
+            <div><strong>One governed workflow</strong><p>Replaced scattered WhatsApp communication with structured, trackable order and payment processes.</p></div>
+            <div><strong>Cross-business visibility</strong><p>Enabled order and payment management across nine business lines from one PayLink platform.</p></div>
+            <div><strong>Faster operational handoff</strong><p>Approved orders automatically became available for invoicing, reducing manual coordination.</p></div>
+            <div><strong>Management intelligence</strong><p>Made sales hierarchy, target achievement and credit exposure visible through actionable reports.</p></div>
+          </div>
+        </section>
+      </article>
+    </section>
+
+    <section class="case-next"><p>Next project</p><a href="aci-connect.html">View ACI Connect <span aria-hidden="true">→</span></a></section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="currentYear"></span> Md Hemel Raihan</p><p>Yamaha DMS &amp; PayLink case study</p><p><a href="../index.html">Back to portfolio</a></p></footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Project screenshot preview"><div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close screenshot">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></div></dialog>
+  <script src="../script.js"></script>
+</body>
+</html>
