@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eco-Link case study by Md Hemel Raihan — Bangladesh's official customer-service platform for EcoFlow and GoodWe products.">
+  <meta name="theme-color" content="#0b0d0c">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Eco-Link Case Study — Md Hemel Raihan</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="../index.html" aria-label="Back to Hemel Raihan portfolio"><span class="brand-mark">HR</span><span class="brand-copy">Hemel Raihan<small>Senior Software Engineer</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav" aria-label="Case study navigation"><a href="../index.html#work">All work</a><a href="../index.html#experience">Experience</a><a href="../assets/resume/hemel-raihan-cv.pdf" target="_blank" rel="noopener">Résumé</a><a class="nav-cta" href="../index.html#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" id="overview">
+      <div class="case-breadcrumb reveal"><a href="../index.html#work">Selected work</a><span>/</span><span>Eco-Link</span></div>
+      <div class="case-hero-grid">
+        <div class="reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Warranty · Customer service · Field operations</p>
+          <h1>Eco-Link</h1>
+          <p class="case-lead">Bangladesh's official warranty and customer-service platform for global renewable-energy brands EcoFlow and GoodWe, connecting product activation, customers and field-service teams in one ecosystem.</p>
+        </div>
+        <div class="case-metrics reveal" aria-label="Project scale"><div><strong>5,000+</strong><span>active customers</span></div><div><strong>3</strong><span>service-side user roles</span></div><div><strong>Web + Apps</strong><span>connected platform</span></div></div>
+      </div>
+      <figure class="case-cover reveal"><img src="../assets/projects/ecolink/01-admin-service-report-redacted.png" alt="Privacy-safe Eco-Link service operations dashboard"></figure>
+    </section>
+
+    <section class="case-body">
+      <aside class="case-toc reveal" aria-label="Case study contents"><span>Case study</span><a href="#project-overview">Overview</a><a href="#business-problem">Business problem</a><a href="#my-role">My role</a><a href="#implementation">Implementation</a><a href="#challenges">Engineering challenges</a><a href="#architecture">Architecture</a><a href="#impact">Impact</a><a href="#gallery">Gallery</a></aside>
+
+      <article class="case-content">
+        <section class="case-section reveal" id="project-overview">
+          <span class="case-section-number">01</span><h2>Overview</h2>
+          <p>Eco-Link manages the product lifecycle after import and sale: SKU-level QR generation, dealer allocation, customer warranty activation and ongoing free or paid service. It gives customers a mobile service channel while providing operational tools for administrators, Technical Service Officers and local electricians.</p>
+          <div class="case-stack"><span>QR-based activation</span><span>Warranty lifecycle</span><span>Customer mobile app</span><span>Web operations dashboard</span><span>Geo-routed field service</span><span>OTP confirmation</span></div>
+        </section>
+
+        <section class="case-section reveal" id="business-problem">
+          <span class="case-section-number">02</span><h2>Business problem</h2>
+          <p>Renewable-energy customers need a reliable way to verify products, activate warranty and request support after purchase. The business also needs visibility from SKU allocation through service completion, while assigning each request to an appropriate service professional based on customer location.</p>
+          <div class="before-after"><div><span>Without one platform</span><strong>Disconnected warranty records</strong><strong>Manual service coordination</strong><strong>Limited customer visibility</strong><strong>Difficult field follow-up</strong></div><i aria-hidden="true">→</i><div><span>Eco-Link workflow</span><strong>QR-led product activation</strong><strong>Customer self-service</strong><strong>Location-based assignment</strong><strong>OTP-confirmed completion</strong></div></div>
+        </section>
+
+        <section class="case-section reveal" id="my-role">
+          <span class="case-section-number">03</span><h2>My role</h2>
+          <p>I worked on the connected warranty and service workflow spanning product activation, customer requests, role-specific service operations, assignment logic, paid-service processing and OTP-backed completion. The work required translating customer-service rules into coordinated web and mobile journeys.</p>
+        </section>
+
+        <section class="case-section reveal" id="implementation">
+          <span class="case-section-number">04</span><h2>What I designed and implemented</h2>
+          <ul class="case-feature-list">
+            <li>Unique QR generation for each product SKU and allocation to authorised dealers.</li>
+            <li>Customer QR scanning to register a purchased product and activate its warranty.</li>
+            <li>Mobile customer journeys for products, warranty, troubleshooting and service history.</li>
+            <li>Free and paid service-request flows for installation and technical support.</li>
+            <li>Role-specific workflows for customers, Technical Service Officers and local electricians.</li>
+            <li>Address-based routing of requests to the relevant field-service resource.</li>
+            <li>Service-charge handling with customer OTP confirmation before completion.</li>
+            <li>Administrative reporting for request status, payment state and service performance.</li>
+          </ul>
+        </section>
+
+        <section class="case-section reveal" id="challenges">
+          <span class="case-section-number">05</span><h2>Key engineering challenges</h2>
+          <div class="challenge-grid"><div><strong>Product identity</strong><p>Maintaining a dependable relationship between SKU, QR code, dealer allocation, customer ownership and warranty state.</p></div><div><strong>Location-aware assignment</strong><p>Routing each request to the correct TSO or local electrician using the customer's service address.</p></div><div><strong>Multi-role workflow</strong><p>Keeping customer, administrator and field-service actions consistent across web, Android and iOS experiences.</p></div><div><strong>Trusted completion</strong><p>Preventing unilateral closure by requiring customer OTP confirmation for the completed service and charge.</p></div></div>
+        </section>
+
+        <section class="case-section reveal" id="architecture">
+          <span class="case-section-number">06</span><h2>Architecture and service lifecycle</h2>
+          <p>The platform connects product identity, warranty ownership and after-sales operations through one controlled lifecycle.</p>
+          <div class="architecture-flow"><div><span>Product setup</span><strong>SKU-level QR generation</strong><strong>Dealer allocation</strong></div><i aria-hidden="true">↓</i><div><span>Customer activation</span><strong>Purchase and QR scan</strong><strong>Warranty registration</strong></div><i aria-hidden="true">↓</i><div><span>Service orchestration</span><strong>Free or paid request</strong><strong>Address-based TSO/electrician routing</strong></div><i aria-hidden="true">↓</i><div><span>Completion</span><strong>Field service and charge</strong><strong>Customer OTP confirmation</strong></div></div>
+          <div class="ownership-note"><strong>Platform scope</strong><p>Web administration and customer-facing Android/iOS experiences, supported by QR integration, role-based workflows, service routing, payment-state tracking and OTP verification.</p></div>
+        </section>
+
+        <section class="case-section reveal" id="impact">
+          <span class="case-section-number">07</span><h2>Impact</h2>
+          <div class="impact-outcomes"><div><strong>5,000+ active customers</strong><p>A growing installed base can activate warranty and access after-sales support through the same platform.</p></div><div><strong>Official service channel</strong><p>EcoFlow and GoodWe customers in Bangladesh receive a structured digital route for product and service support.</p></div><div><strong>End-to-end traceability</strong><p>The business can follow products from dealer allocation through warranty and field-service completion.</p></div><div><strong>Coordinated field operations</strong><p>Location-aware assignments and OTP confirmation create a clearer, more accountable service process.</p></div></div>
+        </section>
+
+        <section class="case-section reveal" id="gallery">
+          <span class="case-section-number">08</span><h2>Selected product screens</h2>
+          <div class="case-gallery">
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/ecolink/01-admin-service-report-redacted.png" data-caption="Privacy-safe paid-service operations and reporting dashboard"><img src="../assets/projects/ecolink/01-admin-service-report-redacted.png" alt="Open Eco-Link service dashboard screenshot"><span>Service operations</span></button>
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/ecolink/02-app-home-redacted.png" data-caption="Customer app home with warranty activation and service access"><img src="../assets/projects/ecolink/02-app-home-redacted.png" alt="Open Eco-Link customer app home screenshot"><span>Customer home</span></button>
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/ecolink/03-language-selection.jpeg" data-caption="Bilingual onboarding for English and Bangla users"><img src="../assets/projects/ecolink/03-language-selection.jpeg" alt="Open Eco-Link language selection screenshot"><span>Bilingual onboarding</span></button>
+            <button class="gallery-thumb" type="button" data-image="../assets/projects/ecolink/04-service-booking-redacted.png" data-caption="Paid and free service selection with booking confirmation"><img src="../assets/projects/ecolink/04-service-booking-redacted.png" alt="Open Eco-Link service booking screenshot"><span>Service booking</span></button>
+          </div>
+        </section>
+      </article>
+    </section>
+
+    <section class="case-next"><p>Next case study</p><a href="demand-generation.html">View Demand Generation <span aria-hidden="true">→</span></a></section>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="currentYear"></span> Md Hemel Raihan</p><p>Eco-Link case study</p><p><a href="../index.html">Back to portfolio</a></p></footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Project screenshot preview"><div class="lightbox-inner"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close screenshot">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></div></dialog>
+  <script src="../script.js"></script>
+</body>
+</html>

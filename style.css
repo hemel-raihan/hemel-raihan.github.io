@@ -294,6 +294,11 @@ img { max-width: 100%; display: block; }
 .gallery-thumb:hover { border-color: var(--accent); transform: translateY(-2px); }
 .gallery-thumb img { width: 100%; height: 72px; object-fit: cover; object-position: center top; filter: saturate(.9); }
 .gallery-thumb span { display: block; padding: 8px 9px; color: #b8c1ba; font-size: .65rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.project-visual.cover-lightbox { width: 100%; min-height: 330px; padding: 0; border: 0; border-radius: 0; background: #0d1218; color: inherit; font: inherit; text-align: left; }
+.project-visual.cover-lightbox:hover { border-color: transparent; transform: none; }
+.project-visual.cover-lightbox img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.project-visual.cover-lightbox .visual-index { display: grid; padding: 0; color: white; font-size: .72rem; }
+.project-visual.cover-lightbox .visual-status { display: block; padding: 8px 11px; color: rgba(255,255,255,.84); font-size: .67rem; }
 .project-actions { margin-top: 24px; }
 .project-card:not(.project-featured) .project-actions { margin-top: auto; padding-top: 24px; }
 .project-actions a, .text-link { color: var(--accent); font-size: .82rem; font-weight: 700; text-decoration: none; }
